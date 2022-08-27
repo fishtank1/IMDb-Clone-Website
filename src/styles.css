@@ -61,3 +61,87 @@ button p {
 button:hover {
     background-color: #252525;
 }
+
+
+
+
+
+
+/* RESPONSIVE SECTION*/
+@media only screen and (max-width: 1280px) {
+    #search-bar {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #search-bar {
+        width: 150px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #menu-btn-txt, #search-bar, #search-bar-select {
+        display: none;
+    }
+
+    #menu-btn {
+        position: relative;
+        right: 200px;
+    }
+
+    img {
+        position: relative;
+        left: -50px;
+    }
+
+    #fav-btn {
+        position: relative;
+        left: 120px;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+    #menu-btn-txt, #search-bar, #search-bar-select {
+        display: none;
+    }
+
+    #menu-btn {
+        position: relative;
+        right: 170px;
+    }
+
+    img {
+        position: relative;
+        left: -30px;
+    }
+
+    #fav-btn {
+        position: relative;
+        left: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    #menu-btn-txt, #search-bar, #search-bar-select {
+        display: none;
+    }
+
+    #menu-btn {
+        position: relative;
+        right: 150px;
+    }
+
+    img {
+        position: relative;
+        left: -10px;
+    }
+
+    #fav-btn {
+        position: relative;
+        left: 80px;
+    }
+}
