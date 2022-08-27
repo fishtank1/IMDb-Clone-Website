@@ -1,16 +1,40 @@
-/* NAVIGATION REALATED STYLES */
+body {
+    margin: 0px;
+    width: 100%;
+    position: relative;
+    background-color: #141414;
+}
+
+/*-------------- NAVIGATION REALATED STYLES --------------*/
 /* BASIC NAV TAG SETUP */
 nav {
     margin: 0px;
     height: 53px;
+    position: fixed;
+    top: 0px;
     font-weight: bold;
-    background-color: #121212;
+    background-color: #1212124a;
 }
 
 /* LOGO SETUP */
 nav img {
     width: 65px;
     height: 33px;
+}
+
+#img-back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#vignette:after {
+    content: '';
+    opacity: 0.5;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    box-shadow: inset 0px 0px 150px black;  
+    background-image: linear-gradient(to right, black,rgba(255, 255, 255, 0.201));
 }
 
 /* SEARCH BAR SETUP */
@@ -29,9 +53,9 @@ nav img {
     width: 50px;
     height: 32px;
     padding: 2px;
+    font-weight: 600;
     padding-left: 5px;
     padding-right: 5px;
-    font-weight: 600;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -49,7 +73,7 @@ nav img {
 }
 
 /* MENU AND FAVS */
-button {
+#fav-btn, #menu-btn {
     padding: 8px;
     margin: 0 30px;
 }
@@ -58,30 +82,141 @@ button p {
     padding: 0 2px;
 }
 
-button:hover {
+#fav-btn:hover, #menu-btn:hover {
     background-color: #252525;
 }
 
 
+/*-------------- HEADER SECTION --------------*/
+header {
+    top: 205px;
+    left: 4vw;
+    width: auto;
+    position: absolute;
+}
+
+.header-txt {
+    width: 45%;
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+
+#trend-img {
+    width: 36vw;
+}
+
+#play, #info {
+    padding: 10px;
+}
+
+#play {
+    width: 9.5%;
+    color: black;
+    background-color: white;
+}
+
+#info {
+    width: 14%;
+    margin-left: 15px;
+    background-color: #74746f;
+}
+
+.header-btn-txt {
+    font-weight: bold;
+    font-size:x-large;
+}
+
+/*-------------- RESPONSIVE SECTION --------------*/
 
 
-
-
-/* RESPONSIVE SECTION*/
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) and (min-width: 1608px) {
     #search-bar {
         width: 500px;
     }
+
+    #play, #info {
+        padding: 2px;
+    }
+    
+    #play {
+        width: 9.5%;
+        color: black;
+        background-color: white;
+    }
+    
+    #info {
+        width: 18%;
+        margin-left: 15px;
+        background-color: #74746f;
+    }
+    
+    .header-btn-txt {
+        font-weight: bold;
+        font-size:medium;
+    }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1609px) {
     #search-bar {
         width: 150px;
+    }
+
+    header {
+        top: 135px;
+    }
+
+    #play, #info {
+        padding: 10px;
+    }
+    
+    #play {
+        width: 10%;
+        color: black;
+        background-color: white;
+    }
+    
+    #info {
+        width: 18%;
+        margin-left: 15px;
+        background-color: #74746f;
+    }
+    
+    .header-btn-txt {
+        font-weight: bold;
+        font-size:large;
+    }
+}
+
+@media only screen and (max-width: 1052px) and (min-width: 700px) {
+    header {
+        top: 135px;
+    }
+
+    #play, #info {
+        padding: 10px;
+    }
+    
+    #play {
+        width: 20%;
+        color: black;
+        background-color: white;
+    }
+    
+    #info {
+        width: 30%;
+        margin-left: 15px;
+        background-color: #74746f;
+    }
+    
+    .header-btn-txt {
+        font-weight: bold;
+        font-size:large;
     }
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) and (min-width: 639px) {
     #menu-btn-txt, #search-bar, #search-bar-select {
         display: none;
     }
@@ -91,7 +226,7 @@ button:hover {
         right: 200px;
     }
 
-    img {
+    nav img {
         position: relative;
         left: -50px;
     }
@@ -100,32 +235,35 @@ button:hover {
         position: relative;
         left: 120px;
     }
+
+    header {
+        top: 10vh;
+    }
+
+    #play, #info {
+        padding: 8px;
+    }
+    
+    #play {
+        width: 30%;
+        color: black;
+        background-color: white;
+    }
+    
+    #info {
+        width: 40%;
+        margin-left: 15px;
+        background-color: #74746f;
+    }
+    
+    .header-btn-txt {
+        font-weight: bold;
+        font-size: medium;
+    }
 }
 
 
-@media only screen and (max-width: 575px) {
-    #menu-btn-txt, #search-bar, #search-bar-select {
-        display: none;
-    }
-
-    #menu-btn {
-        position: relative;
-        right: 170px;
-    }
-
-    img {
-        position: relative;
-        left: -30px;
-    }
-
-    #fav-btn {
-        position: relative;
-        left: 100px;
-    }
-}
-
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 639px) and (min-width: 532px) {
     #menu-btn-txt, #search-bar, #search-bar-select {
         display: none;
     }
@@ -135,7 +273,7 @@ button:hover {
         right: 210px;
     }
 
-    img {
+    nav img {
         position: relative;
         left: 45px;
     }
@@ -143,9 +281,38 @@ button:hover {
     #fav-btn {
         display: none;
     }
+
+    header {
+        top: 9vh;
+    }
+
+    #play, #info {
+        padding: 5px;
+    }
+    
+    #play {
+        width: 30%;
+        color: black;
+        background-color: white;
+    }
+    
+    #info {
+        width: 40%;
+        margin-left: 15px;
+        background-color: #74746f;
+    }
+    
+    .header-btn-txt {
+        font-weight: bold;
+        font-size: smaller;
+    }
+
+    .btn-icn {
+        font-size: small;
+    }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 532px) {
     #menu-btn-txt, #search-bar, #search-bar-select {
         display: none;
     }
@@ -155,12 +322,41 @@ button:hover {
         right: 195px;
     }
 
-    img {
+    nav img {
         position: relative;
         left: 45px;
     }
 
     #fav-btn {
         display: none;
+    }
+
+    header {
+        top: 7vh;
+    }
+
+    #play, #info {
+        padding: 5px;
+    }
+    
+    #play {
+        width: 30%;
+        color: black;
+        background-color: white;
+    }
+    
+    #info {
+        width: 40%;
+        margin-left: 15px;
+        background-color: #74746f;
+    }
+    
+    .header-btn-txt {
+        font-weight: bold;
+        font-size: smaller;
+    }
+
+    .btn-icn {
+        font-size: small;
     }
 }

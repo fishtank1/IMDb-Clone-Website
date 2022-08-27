@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/41f5e993c5.js" crossorigin="anonymous"></script>
 </head>
-<body class="flex bg-black">
+<body class="flex-col bg-black">
+  <div id="vignette">
+    <img src="https://occ-0-4995-2186.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABTfvtY6NptM7gnUyzFDCvkz5Rwq9c0CXpe3SPg9VOZIPoVJ2JHYsqY-zYD0dDjiGKT5EheuXBKKxPYb_uqRl1ETnY-Xry7jUcHeJ.jpg?r=cb6" id="img-back" alt="">
+  </div>
+
   <!-- NAV BAR FOR SITE -->
   <nav class="flex justify-center items-center w-full">
     <!-- LOGO AND TEXT -->
       <!-- Logo for site -->
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png" alt="" srcset="">
     
-    <button class="rounded text-white flex items-center">
+    <button class="rounded text-white flex items-center" id="menu-btn">
       <p>
         <i class="fa-solid fa-bars"></i>
       </p>
-      <p class="text-sm">Menu</p>
+      <p class="text-sm" id="menu-btn-txt">Menu</p>
     </button>
     <!-- SEARCH BAR RELATED  -->
     <form action="">
@@ -34,14 +38,47 @@
     </form>
     <!-- FAV SECTION -->
     <!-- Add a verticle line here -->
-    <button class="rounded text-white flex items-center">
+    <button class="rounded text-white flex items-center" id="fav-btn">
       <p>
         <i class="fa-solid fa-heart"></i>
       </p>
-      <p class="text-sm p-0">My favourite</p>
+      <p class="text-sm p-0" id="fav-btn-txt">My favourite</p>
     </button>
   </nav>
 
+  <header class="flex">
+    <div>
+      <img src="https://occ-0-4995-2186.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABb-UpmYTtrGdTsouBBn7c4Lbldr9weTG1Z5C7hmnYARuZFPEZpr4Hk7glwUOglFBw_EyYhWe52CEylRmxPRSFDXNykofDT1-IX4ZZf_YjfqO.png?r=030" id="trend-img" alt="">
+      <p class="text-white header-txt">Burdened by old demons, a troubled but brilliant detective sets out to solve two confounding abduction cases - one involving his own girlfriend.</p>
+      <div class="flex">
+        <button class="flex justify-center items-center rounded text-white btn-tr" id="play">
+          <i class="fa-solid fa-play btn-icn"></i>
+          <p class="ml-2 header-btn-txt">Play</p>
+        </button>
+        
+        <button class="flex justify-center items-center rounded text-white btn-tr" id="info">
+          <i class="fa-solid fa-circle-info btn-icn"></i>
+          <p class="ml-2 header-btn-txt">More Info</p>
+        </button>
+      </div>
+    </div>
+    <div></div>
+  </header>
 
 </body>
 </html>
+
+
+<!--
+
+<button class="flex justify-center items-center rounded text-white btn-tr" id="play">
+  <i class="fa-solid fa-play fa-2xl"></i>
+  <p class="text-xl ml-2">Play</p>
+</button>
+
+<button class="flex justify-center items-center rounded text-white btn-tr" id="info">
+  <i class="fa-solid fa-circle-info fa-2xl"></i>
+  <p class="text-xl ml-2">More Info</p>
+</button>
+
+-->

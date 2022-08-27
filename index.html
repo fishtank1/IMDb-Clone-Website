@@ -1,47 +1,362 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./dist/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="./src/styles.css">
-  <script src="https://kit.fontawesome.com/41f5e993c5.js" crossorigin="anonymous"></script>
-</head>
-<body class="flex bg-black">
-  <!-- NAV BAR FOR SITE -->
-  <nav class="flex justify-center items-center w-full">
-    <!-- LOGO AND TEXT -->
-      <!-- Logo for site -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png" alt="" srcset="">
-    
-    <button class="rounded text-white flex items-center" id="menu-btn">
-      <p>
-        <i class="fa-solid fa-bars"></i>
-      </p>
-      <p class="text-sm" id="menu-btn-txt">Menu</p>
-    </button>
-    <!-- SEARCH BAR RELATED  -->
-    <form action="">
-      <!-- Select search type -->
-      <select name="" id="search-bar-select">
-        <option value="all">All</option>
-        <option value="titles">Titles</option>
-        <option value="tv-episodes">TV Episodes</option>
-        <option value="celebs">Celebs</option>
-      </select>
-      <!-- Search area -->
-      <input type="search" name="search-bar" placeholder="Search IMDB" id="search-bar">
-    </form>
-    <!-- FAV SECTION -->
-    <!-- Add a verticle line here -->
-    <button class="rounded text-white flex items-center" id="fav-btn">
-      <p>
-        <i class="fa-solid fa-heart"></i>
-      </p>
-      <p class="text-sm p-0" id="fav-btn-txt">My favourite</p>
-    </button>
-  </nav>
+body {
+  margin: 0px;
+  width: 100%;
+  position: relative;
+  background-color: #141414;
+}
+
+/*-------------- NAVIGATION REALATED STYLES --------------*/
+/* BASIC NAV TAG SETUP */
+nav {
+  margin: 0px;
+  height: 53px;
+  position: fixed;
+  top: 0px;
+  font-weight: bold;
+  background-color: #1212124a;
+}
+
+/* LOGO SETUP */
+nav img {
+  width: 65px;
+  height: 33px;
+}
+
+#img-back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+#vignette:after {
+  content: '';
+  opacity: 0.5;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  box-shadow: inset 0px 0px 150px black;  
+  background-image: linear-gradient(to right, black,rgba(255, 255, 255, 0.201));
+}
+
+/* SEARCH BAR SETUP */
+#search-bar {
+  height: 32px;
+  width: 800px;
+  padding: 8px;
+  font-weight: 300;
+  margin-left: -4px;
+  outline: rgb(246,200,0);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#search-bar-select {
+  width: 50px;
+  height: 32px;
+  padding: 2px;
+  font-weight: 600;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#search-bar-select:hover{
+  width: 50px;
+  height: 32px;
+  padding: 2px;
+  opacity: 0.9;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 600;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+/* MENU AND FAVS */
+#fav-btn, #menu-btn {
+  padding: 8px;
+  margin: 0 30px;
+}
+
+button p {
+  padding: 0 2px;
+}
+
+#fav-btn:hover, #menu-btn:hover {
+  background-color: #252525;
+}
 
 
-</body>
-</html>
+/*-------------- HEADER SECTION --------------*/
+header {
+  top: 205px;
+  left: 4vw;
+  width: auto;
+  position: absolute;
+}
+
+.header-txt {
+  width: 45%;
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 1.2vw;
+}
+
+#trend-img {
+  width: 36vw;
+}
+
+#play, #info {
+  padding: 10px;
+}
+
+#play {
+  width: 9.5%;
+  color: black;
+  background-color: white;
+}
+
+#info {
+  width: 14%;
+  margin-left: 15px;
+  background-color: #74746f;
+}
+
+.header-btn-txt {
+  font-weight: bold;
+  font-size:x-large;
+}
+
+/*-------------- RESPONSIVE SECTION --------------*/
+
+
+@media only screen and (max-width: 1280px) and (min-width: 1608px) {
+  #search-bar {
+      width: 500px;
+  }
+
+  #play, #info {
+      padding: 2px;
+  }
+  
+  #play {
+      width: 9.5%;
+      color: black;
+      background-color: white;
+  }
+  
+  #info {
+      width: 18%;
+      margin-left: 15px;
+      background-color: #74746f;
+  }
+  
+  .header-btn-txt {
+      font-weight: bold;
+      font-size:medium;
+  }
+}
+
+@media only screen and (max-width: 1609px) {
+  #search-bar {
+      width: 150px;
+  }
+
+  header {
+      top: 135px;
+  }
+
+  #play, #info {
+      padding: 10px;
+  }
+  
+  #play {
+      width: 10%;
+      color: black;
+      background-color: white;
+  }
+  
+  #info {
+      width: 18%;
+      margin-left: 15px;
+      background-color: #74746f;
+  }
+  
+  .header-btn-txt {
+      font-weight: bold;
+      font-size:large;
+  }
+}
+
+@media only screen and (max-width: 1052px) and (min-width: 700px) {
+  header {
+      top: 135px;
+  }
+
+  #play, #info {
+      padding: 10px;
+  }
+  
+  #play {
+      width: 20%;
+      color: black;
+      background-color: white;
+  }
+  
+  #info {
+      width: 30%;
+      margin-left: 15px;
+      background-color: #74746f;
+  }
+  
+  .header-btn-txt {
+      font-weight: bold;
+      font-size:large;
+  }
+}
+
+
+@media only screen and (max-width: 700px) and (min-width: 639px) {
+  #menu-btn-txt, #search-bar, #search-bar-select {
+      display: none;
+  }
+
+  #menu-btn {
+      position: relative;
+      right: 200px;
+  }
+
+  nav img {
+      position: relative;
+      left: -50px;
+  }
+
+  #fav-btn {
+      position: relative;
+      left: 120px;
+  }
+
+  header {
+      top: 10vh;
+  }
+
+  #play, #info {
+      padding: 8px;
+  }
+  
+  #play {
+      width: 30%;
+      color: black;
+      background-color: white;
+  }
+  
+  #info {
+      width: 40%;
+      margin-left: 15px;
+      background-color: #74746f;
+  }
+  
+  .header-btn-txt {
+      font-weight: bold;
+      font-size: medium;
+  }
+}
+
+
+@media only screen and (max-width: 639px) and (min-width: 532px) {
+  #menu-btn-txt, #search-bar, #search-bar-select {
+      display: none;
+  }
+
+  #menu-btn {
+      position: relative;
+      right: 210px;
+  }
+
+  nav img {
+      position: relative;
+      left: 45px;
+  }
+
+  #fav-btn {
+      display: none;
+  }
+
+  header {
+      top: 9vh;
+  }
+
+  #play, #info {
+      padding: 5px;
+  }
+  
+  #play {
+      width: 30%;
+      color: black;
+      background-color: white;
+  }
+  
+  #info {
+      width: 40%;
+      margin-left: 15px;
+      background-color: #74746f;
+  }
+  
+  .header-btn-txt {
+      font-weight: bold;
+      font-size: smaller;
+  }
+
+  .btn-icn {
+      font-size: small;
+  }
+}
+
+@media only screen and (max-width: 532px) {
+  #menu-btn-txt, #search-bar, #search-bar-select {
+      display: none;
+  }
+
+  #menu-btn {
+      position: relative;
+      right: 195px;
+  }
+
+  nav img {
+      position: relative;
+      left: 45px;
+  }
+
+  #fav-btn {
+      display: none;
+  }
+
+  header {
+      top: 7vh;
+  }
+
+  #play, #info {
+      padding: 5px;
+  }
+  
+  #play {
+      width: 30%;
+      color: black;
+      background-color: white;
+  }
+  
+  #info {
+      width: 40%;
+      margin-left: 15px;
+      background-color: #74746f;
+  }
+  
+  .header-btn-txt {
+      font-weight: bold;
+      font-size: smaller;
+  }
+
+  .btn-icn {
+      font-size: small;
+  }
+}
