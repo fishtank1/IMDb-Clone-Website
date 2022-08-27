@@ -1,0 +1,63 @@
+/* NAVIGATION REALATED STYLES */
+/* BASIC NAV TAG SETUP */
+nav {
+    margin: 0px;
+    height: 53px;
+    font-weight: bold;
+    background-color: #121212;
+}
+
+/* LOGO SETUP */
+nav img {
+    width: 65px;
+    height: 33px;
+}
+
+/* SEARCH BAR SETUP */
+#search-bar {
+    height: 32px;
+    width: 800px;
+    padding: 8px;
+    font-weight: 300;
+    margin-left: -4px;
+    outline: rgb(246,200,0);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#search-bar-select {
+    width: 50px;
+    height: 32px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 600;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#search-bar-select:hover{
+    width: 50px;
+    height: 32px;
+    padding: 2px;
+    opacity: 0.9;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 600;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* MENU AND FAVS */
+button {
+    padding: 8px;
+    margin: 0 30px;
+}
+
+button p {
+    padding: 0 2px;
+}
+
+button:hover {
+    background-color: #252525;
+}
