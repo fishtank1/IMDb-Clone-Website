@@ -132,16 +132,35 @@ button:hover {
 
     #menu-btn {
         position: relative;
-        right: 150px;
+        right: 210px;
     }
 
     img {
         position: relative;
-        left: -10px;
+        left: 45px;
     }
 
     #fav-btn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #menu-btn-txt, #search-bar, #search-bar-select {
+        display: none;
+    }
+
+    #menu-btn {
         position: relative;
-        left: 80px;
+        right: 195px;
+    }
+
+    img {
+        position: relative;
+        left: 45px;
+    }
+
+    #fav-btn {
+        display: none;
     }
 }
