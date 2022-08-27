@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/41f5e993c5.js" crossorigin="anonymous"></script>
+</head>
+<body class="flex bg-black">
+  <!-- NAV BAR FOR SITE -->
+  <nav class="flex justify-center items-center w-full">
+    <!-- LOGO AND TEXT -->
+      <!-- Logo for site -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png" alt="" srcset="">
+    
+    <button class="rounded text-white flex items-center">
+      <p>
+        <i class="fa-solid fa-bars"></i>
+      </p>
+      <p class="text-sm">Menu</p>
+    </button>
+    <!-- SEARCH BAR RELATED  -->
+    <form action="">
+      <!-- Select search type -->
+      <select name="" id="search-bar-select">
+        <option value="all">All</option>
+        <option value="titles">Titles</option>
+        <option value="tv-episodes">TV Episodes</option>
+        <option value="celebs">Celebs</option>
+      </select>
+      <!-- Search area -->
+      <input type="search" name="search-bar" placeholder="Search IMDB" id="search-bar">
+    </form>
+    <!-- FAV SECTION -->
+    <!-- Add a verticle line here -->
+    <button class="rounded text-white flex items-center">
+      <p>
+        <i class="fa-solid fa-heart"></i>
+      </p>
+      <p class="text-sm p-0">My favourite</p>
+    </button>
+  </nav>
+
+
+</body>
+</html>
