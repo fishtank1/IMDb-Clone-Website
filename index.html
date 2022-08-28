@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMDb</title>
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png" type="image/x-icon">
+  <!-- TAILWIND CSS UTILITY -->
   <link href="./dist/output.css" rel="stylesheet">
+  <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="./src/styles.css">
+  <!-- IMPORTING TAILWIND AND FONT-AWESOME CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/41f5e993c5.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="flex-col bg-black">
+  <!-- POSTER IMAGE IN BACKGROUND -->
   <div id="vignette">
     <img src="https://occ-0-4995-2186.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABTfvtY6NptM7gnUyzFDCvkz5Rwq9c0CXpe3SPg9VOZIPoVJ2JHYsqY-zYD0dDjiGKT5EheuXBKKxPYb_uqRl1ETnY-Xry7jUcHeJ.jpg?r=cb6" id="img-back" alt="">
   </div>
@@ -46,17 +55,19 @@
     </button>
   </nav>
 
+  <!-- HEADER PAGE -->
+
   <header class="flex">
     <div>
       <img src="https://occ-0-4995-2186.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABb-UpmYTtrGdTsouBBn7c4Lbldr9weTG1Z5C7hmnYARuZFPEZpr4Hk7glwUOglFBw_EyYhWe52CEylRmxPRSFDXNykofDT1-IX4ZZf_YjfqO.png?r=030" id="trend-img" alt="">
       <p class="text-white header-txt">Burdened by old demons, a troubled but brilliant detective sets out to solve two confounding abduction cases - one involving his own girlfriend.</p>
       <div class="flex">
-        <button class="flex justify-center items-center rounded text-white btn-tr" id="play">
+        <button class="flex justify-center items-center shadow-2xl rounded text-white btn-tr" id="play">
           <i class="fa-solid fa-play btn-icn"></i>
           <p class="ml-2 header-btn-txt">Play</p>
         </button>
         
-        <button class="flex justify-center items-center rounded text-white btn-tr" id="info">
+        <button class="flex justify-center items-center shadow-2xl rounded text-white btn-tr" id="info">
           <i class="fa-solid fa-circle-info btn-icn"></i>
           <p class="ml-2 header-btn-txt">More Info</p>
         </button>
@@ -64,6 +75,6 @@
     </div>
     <div></div>
   </header>
-
+  
 </body>
 </html>

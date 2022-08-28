@@ -1,8 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
     width: 100%;
     position: relative;
-    background-color: #141414;
 }
 
 /*-------------- NAVIGATION REALATED STYLES --------------*/
@@ -34,7 +37,7 @@ nav img {
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     box-shadow: inset 0px 0px 150px black;  
-    background-image: linear-gradient(to right, black,rgba(255, 255, 255, 0.201));
+    background-image: linear-gradient(to right, rgb(0, 0, 0),rgba(187, 152, 152, 0.138));
 }
 
 /* SEARCH BAR SETUP */
@@ -76,6 +79,7 @@ nav img {
 #fav-btn, #menu-btn {
     padding: 8px;
     margin: 0 30px;
+    transition: 0.2s ease background-color;
 }
 
 button p {
@@ -83,7 +87,9 @@ button p {
 }
 
 #fav-btn:hover, #menu-btn:hover {
-    background-color: #252525;
+    color: black;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.36);
 }
 
 
@@ -113,18 +119,43 @@ header {
 #play {
     width: 9.5%;
     color: black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.855);
 }
 
 #info {
     width: 14%;
     margin-left: 15px;
-    background-color: #74746f;
+    background-color: #3a3434b8;
 }
 
 .header-btn-txt {
     font-weight: bold;
     font-size:x-large;
+}
+
+/*-------------- SEARCH BOX --------------*/
+section {
+    margin: 40% auto;
+}
+
+#outline {
+    width: 80%;
+    height: 6vh;
+    background-color: #74746fa2;
+}
+
+#search-box {
+    width: 98%;
+    height: 5vh;
+    margin: auto;
+    background-color: #000000a2;
+}
+
+/*-------------- MOVIE TILES --------------*/
+#movie-tile {
+    width: 20%;
+    height: 56vh;
+    border: 2px solid red;
 }
 
 /*-------------- RESPONSIVE SECTION --------------*/
@@ -154,6 +185,11 @@ header {
     .header-btn-txt {
         font-weight: bold;
         font-size:medium;
+    }
+
+    #outline {
+        margin: 55% auto;
+        display: block;
     }
 }
 
@@ -186,6 +222,10 @@ header {
         font-weight: bold;
         font-size:large;
     }
+
+    #outline {
+        margin: 55% auto;
+    }
 }
 
 @media only screen and (max-width: 1052px) and (min-width: 700px) {
@@ -213,6 +253,10 @@ header {
         font-weight: bold;
         font-size:large;
     }
+
+    #outline {
+        margin: 55% auto;
+    }
 }
 
 
@@ -236,41 +280,26 @@ header {
         left: 120px;
     }
 
-    header {
-        top: 10vh;
+    header div, #vignette {
+        display: none;
+        position: absolute;
     }
 
-    #play, #info {
-        padding: 8px;
+    #outline {
+        margin: 55% auto;
     }
-    
-    #play {
-        width: 30%;
-        color: black;
-        background-color: white;
-    }
-    
-    #info {
-        width: 40%;
-        margin-left: 15px;
-        background-color: #74746f;
-    }
-    
-    .header-btn-txt {
-        font-weight: bold;
-        font-size: medium;
-    }
+
 }
 
 
-@media only screen and (max-width: 639px) and (min-width: 532px) {
+@media only screen and (max-width: 639px) and (min-width: 566px) {
     #menu-btn-txt, #search-bar, #search-bar-select {
         display: none;
     }
 
     #menu-btn {
         position: relative;
-        right: 210px;
+        right: 280px;
     }
 
     nav img {
@@ -282,44 +311,24 @@ header {
         display: none;
     }
 
-    header {
-        top: 9vh;
+    header div, #vignette {
+        display: none;
+        position: absolute;
     }
 
-    #play, #info {
-        padding: 5px;
-    }
-    
-    #play {
-        width: 30%;
-        color: black;
-        background-color: white;
-    }
-    
-    #info {
-        width: 40%;
-        margin-left: 15px;
-        background-color: #74746f;
-    }
-    
-    .header-btn-txt {
-        font-weight: bold;
-        font-size: smaller;
-    }
-
-    .btn-icn {
-        font-size: small;
+    #outline {
+        margin: 55% auto;
     }
 }
 
-@media only screen and (max-width: 532px) {
+@media only screen and (max-width: 566px) {
     #menu-btn-txt, #search-bar, #search-bar-select {
         display: none;
     }
 
     #menu-btn {
         position: relative;
-        right: 195px;
+        right: 260px;
     }
 
     nav img {
@@ -331,32 +340,34 @@ header {
         display: none;
     }
 
-    header {
-        top: 7vh;
+    header div, #vignette {
+        display: none;
+        position: absolute;
     }
 
-    #play, #info {
-        padding: 5px;
-    }
-    
-    #play {
-        width: 30%;
-        color: black;
-        background-color: white;
-    }
-    
-    #info {
-        width: 40%;
-        margin-left: 15px;
-        background-color: #74746f;
-    }
-    
-    .header-btn-txt {
-        font-weight: bold;
-        font-size: smaller;
+    #outline {
+        margin: 60% auto;
     }
 
-    .btn-icn {
-        font-size: small;
+}
+
+@media only screen and (max-width: 526px) {
+    #menu-btn {
+        right: 240px;
+    }
+
+    #outline {
+        margin: 60% auto;
     }
 }
+
+@media only screen and (max-width: 498px) {
+    #menu-btn {
+        right: 200px;
+    }
+
+    #outline {
+        margin: 80% auto;
+    }
+}
+
